@@ -7,7 +7,7 @@ import classes from './ErrorModal.module.css';
 
 const Backdrop = props => 
 {
-  return <div className={classes.backdrop} onClick={props.onConfirm} />
+  return <div className={classes.backdrop} />
 }
 
 const ModalOverlay = props => 
@@ -29,7 +29,7 @@ const ErrorModal = (props) =>
 {
   return (
     <>
-
+      {ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />, document.getElementById('backdrop-root'))}
     </>
   );
 };
