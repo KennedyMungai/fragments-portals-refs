@@ -30,6 +30,7 @@ const ErrorModal = (props) =>
   return (
     <>
       {ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />, document.getElementById('backdrop-root'))}
+      {ReactDOM.createPortal(<ModalOverlay />, document.getElementById('overlay-root'))}
     </>
   );
 };
