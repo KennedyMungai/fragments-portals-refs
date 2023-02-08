@@ -2,9 +2,7 @@ import React from 'react'
 
 const Wrapper = (props) =>
 {
-    return (
-        <div>Wrapper</div>
-    )
+    return props.children
 }
 
 export default Wrapper
